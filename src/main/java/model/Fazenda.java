@@ -1,17 +1,19 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Fazenda {
     private int id;
     private String nome;
     private String localizacao;
-
+    private ArrayList<EstoqueRacao> estoqueRacao;
     private ArrayList<Viveiro> viveiros;
 
     public Fazenda() {
         this.viveiros = new ArrayList<>();
+        this.estoqueRacao = new ArrayList<>();
     }
 
     public Fazenda(int id, String nome, String localizacao) {
@@ -19,6 +21,7 @@ public class Fazenda {
         this.nome = nome;
         this.localizacao = localizacao;
         this.viveiros = new ArrayList<>();
+        this.estoqueRacao = new ArrayList<>();
     }
 
     public int getId() {
@@ -43,6 +46,14 @@ public class Fazenda {
 
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
+    }
+
+    public ArrayList<EstoqueRacao> getEstoqueRacao() {
+        return estoqueRacao;
+    }
+
+    public void setEstoqueRacao(ArrayList<EstoqueRacao> estoqueRacao) {
+        this.estoqueRacao = estoqueRacao;
     }
 
     public ArrayList<Viveiro> getViveiros() {
