@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "nome": "Fazenda são Cosmo",
+    "localizacao": "Pirpirituba",
+    "viveiros": [
+      {
+        "id": 101,
+        "nome": "V1",
+        "area": 500.0,
+        "historicoQualidade": [
+          {
+            "data": "2025-07-18",
+            "amonia": 0.3,
+            "nitrito": 0.1,
+            "ph": 7.8,
+            "alcalinidade": 120.0,
+            "salinidade": 25.0,
+            "oxigenio": 6.5
+          }
+        ],
+        "historicoBiometria": [
+          {
+            "data": "2025-07-18",
+            "pesoMedio": 8.5,
+            "sobrevivencia": 95.0,
+            "biomassa": 100.0
+          }
+        ],
+        "historicoConsumoRacao": [
+          {
+            "data": "2025-07-18",
+            "quantidade": 12.0,
+            "tipoRacao": "Crescimento"
+          }
+        ]
+      }
+    ]
+  }
+]

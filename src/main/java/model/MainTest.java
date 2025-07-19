@@ -1,9 +1,13 @@
 package model;
 
+import service.FazendaService;
+
 public class MainTest {
     public static void main(String[] args) {
+        FazendaService fazendaService = new FazendaService();
 
-     //Criação fazenda
+
+        //Criação fazenda
      Fazenda fazenda = new Fazenda();
      fazenda.setId(1);
      fazenda.setNome("Fazenda são Cosmo");
@@ -43,6 +47,10 @@ public class MainTest {
      consumo.setTipoRacao("Crescimento");
      //Relacionando Consumo com viveiro
      viveiro.getHistoricoConsumoRacao().add(consumo);
+
+        // Salva a fazenda via service
+        fazendaService.cadastraFazenda(fazenda);
+
 
         // Teste Básico
         System.out.println("📍 Fazenda: " + fazenda.getNome());

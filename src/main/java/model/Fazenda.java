@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Fazenda {
     private int id;
@@ -50,5 +51,17 @@ public class Fazenda {
 
     public void setViveiros(ArrayList<Viveiro> viveiros) {
         this.viveiros = viveiros;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Fazenda fazenda = (Fazenda) o;
+        return id == fazenda.id && Objects.equals(nome, fazenda.nome) && Objects.equals(localizacao, fazenda.localizacao) && Objects.equals(viveiros, fazenda.viveiros);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nome, localizacao, viveiros);
     }
 }
