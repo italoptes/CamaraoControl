@@ -63,6 +63,7 @@ public class Usuario {
         this.fazendas = fazendas;
     }
 
+
     @Override
     public String toString() {
         return "Usuario{" +
