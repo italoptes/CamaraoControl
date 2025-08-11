@@ -1,3 +1,7 @@
+<p align="center">
+<img src="Asserts/Logo.png" alt="AquaTrack Logo" width="300">
+</p>
+
 # 🦐 Gerenciador de Fazendas de Camarão (AquaTrack)
 
 Sistema web para auxiliar proprietários e funcionários de fazendas aquícolas no **controle de dados, métricas e processos** relacionados ao cultivo de camarões.  
