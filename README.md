@@ -1,7 +1,7 @@
-# 🦐 Gerenciador de Fazendas de Camarão (CamaraoControl)
+# 🦐 Gerenciador de Fazendas de Camarão (AquaTrack)
 
-Um sistema web para auxiliar proprietários e funcionários de fazendas aquícolas no **controle de dados, métricas e processos** relacionados ao cultivo de camarões.  
-Com ele, é possível monitorar **qualidade da água**, **gestão de ração** e **biometria dos camarões**, ajudando a melhorar a eficiência e a sustentabilidade da produção.
+Sistema web para auxiliar proprietários e funcionários de fazendas aquícolas no **controle de dados, métricas e processos** relacionados ao cultivo de camarões.  
+Permite monitorar **qualidade da água**, **gestão de ração** e **biometria dos camarões**, contribuindo para maior eficiência e sustentabilidade da produção.
 
 ---
 
@@ -9,11 +9,8 @@ Com ele, é possível monitorar **qualidade da água**, **gestão de ração** e
 - [🚀 Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [🎯 Funcionalidades](#-funcionalidades)
 - [📐 Arquitetura do Sistema](#-arquitetura-do-sistema)
-- [📂 Estrutura de Pastas](#-estrutura-de-pastas)
-- [⚙️ Instalação e Execução](#️-instalação-e-execução)
+- [⚙️ Instalação e Execução](#-instalação-e-execução)
 - [📊 Cálculos Importantes](#-cálculos-importantes)
-- [📌 Status do Projeto](#-status-do-projeto)
-- [📜 Licença](#-licença)
 
 ---
 
@@ -22,8 +19,9 @@ Com ele, é possível monitorar **qualidade da água**, **gestão de ração** e
 - **Framework Web:** [Javalin](https://javalin.io/)
 - **Template Engine:** [Thymeleaf](https://www.thymeleaf.org/)
 - **Arquitetura:** MVC (Model-View-Controller)
-- **Gerenciamento de dependências:** Maven
-- **Banco de Dados:** (Definir conforme implementação)
+- **Gerenciamento de Dependências:** Maven
+- **Persistência de Dados:** Arquivos JSON
+- **Front-end:** HTML, CSS
 - **Plataforma:** Servidor Web
 
 ---
@@ -32,16 +30,16 @@ Com ele, é possível monitorar **qualidade da água**, **gestão de ração** e
 
 ### 1. Controle da Qualidade da Água
 - Registro e consulta de parâmetros:
-    - Amônia
-    - Nitrito
-    - pH
-    - Alcalinidade
-    - Salinidade
-    - Oxigênio Dissolvido
+  - Amônia
+  - Nitrito
+  - pH
+  - Alcalinidade
+  - Salinidade
+  - Oxigênio Dissolvido
 - Histórico e análise comparativa dos dados
 
 ### 2. Gestão de Ração
-- Controle de estoque de ração
+- Controle de estoque
 - Registro do consumo diário
 - Atualização automática das quantidades disponíveis
 
@@ -55,10 +53,6 @@ Com ele, é possível monitorar **qualidade da água**, **gestão de ração** e
 ## 📊 Cálculos Importantes
 O sistema calcula automaticamente o **FCA**:
 
-```
-FCA = Ração Fornecida / Biomassa Produzida
-```
-
 - **Ração Fornecida**: total de alimento disponibilizado aos camarões (em kg)
 - **Biomassa Produzida**: peso total de camarões vivos no tanque (em kg)
 
@@ -71,31 +65,9 @@ O projeto segue o padrão **MVC**:
 
 - **Model** → Representa os dados e regras de negócio (`src/main/java/model`)
 - **View** → Interface web construída com HTML + Thymeleaf (`src/main/resources/templates`)
-- **Controller** → Camada intermediária que recebe as requisições e coordena as respostas (`src/main/java/controller`)
-- **Service** → Camada de lógica e regras de negócio (`src/main/java/service`)
-- **Repository** → Acesso e manipulação dos dados (`src/main/java/repository`)
-
----
-
-## 📂 Estrutura de Pastas
-
-```
-CamaraoControl
- ├── pom.xml
- ├── src
- │   ├── main
- │   │   ├── java
- │   │   │   ├── controller
- │   │   │   ├── model
- │   │   │   ├── repository
- │   │   │   ├── service
- │   │   │   └── Main.java
- │   │   └── resources
- │   │       ├── templates (Thymeleaf)
- │   │       └── static (CSS, JS, imagens)
- │   └── test (testes unitários)
- └── README.md
-```
+- **Controller** → Camada que recebe as requisições e coordena as respostas (`src/main/java/controller`)
+- **Service** → Lógica e regras de negócio (`src/main/java/service`)
+- **Repository** → Acesso e manipulação de dados (`src/main/java/repository`)
 
 ---
 
@@ -103,12 +75,12 @@ CamaraoControl
 
 1. **Clonar o repositório**
 ```bash
-git clone https://github.com/seu-usuario/CamaraoControl.git
+git clone https://github.com/ufpb-aps-poo/projeto-grupo-04.git
 ```
 
 2. **Acessar o diretório do projeto**
 ```bash
-cd CamaraoControl
+cd projeto-grupo-04
 ```
 
 3. **Compilar e executar**
@@ -121,16 +93,6 @@ mvn exec:java
 ```
 http://localhost:7000
 ```
-
----
-
-## 📌 Status do Projeto
-🚧 **Em desenvolvimento** – novas funcionalidades e melhorias estão sendo implementadas.
-
----
-
-## 📜 Licença
-Este projeto é distribuído sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
 
 ---
 
