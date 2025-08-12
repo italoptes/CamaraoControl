@@ -64,7 +64,7 @@ public class FazendaRepository {
 
     public void salvarFazenda(Fazenda fazenda) {
         if (fazenda == null) {
-            throw new IllegalArgumentException("Fazenda ou campos obrigatórios nulos.");
+            throw new IllegalArgumentException("Fazenda ou campos obrigatórios estão nulos.");
         }
         carregarFazendas();
         fazendas.put(fazenda.getId(), fazenda);
